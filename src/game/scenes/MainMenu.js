@@ -9,15 +9,18 @@ export class MainMenu extends Scene
 
     create ()
     {
-        this.add.image(512, 384, 'background');
+        // Get game size
+        const { width, height } = this.sys.game.config;
 
-        this.add.image(512, 300, 'logo');
+        // Add and resize main-menu image to fill the screen
+        const img = this.add.image(width / 2, height / 2, 'main-menu');
+        img.setDisplaySize(width, height);
 
-        this.add.text(512, 460, 'Main Menu', {
+/*        this.add.text(512, 460, 'Main Menu', {
             fontFamily: 'Arial Black', fontSize: 38, color: '#ffffff',
             stroke: '#000000', strokeThickness: 8,
             align: 'center'
-        }).setOrigin(0.5);
+        }).setOrigin(0.5);*/
 
         this.input.once('pointerdown', () => {
 

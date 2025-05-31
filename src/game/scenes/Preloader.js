@@ -33,6 +33,12 @@ export class Preloader extends Scene
         this.load.setPath('assets');
 
         this.load.image('logo', 'logo.png');
+        this.load.image('main-menu', 'Bricks Main Menu.png');
+        this.load.spritesheet('Bricks Main Character', 'Bricks Main Character.png', { frameWidth: 3, frameHeight: 3 });
+        this.load.image('Bricks Main Character', 'Bricks Main Character.png');
+        this.load.image('Bricks Background', 'Bricks Background.png');
+        this.load.image('Bricks Platform', 'Bricks Platform.png');
+        this.load.image('Bricks Game Over', 'Bricks Game Over.png');
     }
 
     create ()
